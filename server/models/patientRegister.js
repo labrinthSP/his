@@ -2,17 +2,18 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 
 const patientSchema = new mongoose.Schema({
-    name: { type: String, required: true },
-    email: { type: String, required: true, unique: true },
-    dob: { type: String, required: true },
-    address: {type: String, required: true},
-    gender: { type: String, required: true },
-    contact: { type: String, required: true },
-    relation: { type: String, required: true },
-    phone: {type: String, required: true},
-    provider: { type: String, required: true },
-    policy: { type: String, required: true },
-    address: {type: String, required: true},
+    name: { type: String,  },
+    email: { type: String, unique: true },
+    dob: { type: String  },
+    address: {type: String },
+    gender: { type: String  },
+    contact: { type: String  },
+    relation: { type: String  },
+    phone: {type: String },
+    provider: { type: String  },
+    policy: { type: String  },
+    address: {type: String },
+    doctorNotes: {type: String}
 });
 
 // Hash the password before saving the patient
