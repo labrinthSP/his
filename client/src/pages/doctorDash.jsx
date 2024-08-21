@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import DoctorPatientRegister from '../components/doctorPatientRegister';
+import { Link } from 'react-router-dom';
 
 export default function DoctorDashboard() {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -28,7 +29,7 @@ export default function DoctorDashboard() {
 
     return (
         <>
-            <div className="flex min-h-screen flex-col gap-y-5 items-center justify-center">
+            {/* <div className="flex min-h-screen flex-col gap-y-5 items-center justify-center">
                 <h1 className="text-4xl text-center mb-10">DOCTOR'S STATION</h1>
                 <div
                     className='cursor-pointer hover:text-2xl text-xl border border-[#626262] p-2 rounded-lg'
@@ -36,9 +37,17 @@ export default function DoctorDashboard() {
                 >
                     View Patient Records
                 </div>
+            </div> */}
+                    <>
+            <div className="flex min-h-screen flex-col gap-y-5 items-center justify-center">
+                <h1 className="text-4xl text-center mb-10">DOCTOR'S STATION</h1>
+                <Link to="/patient-records">
+                    <div className='cursor-pointer hover:text-2xl text-xl border border-[#626262] p-2 rounded-lg'>View Patient Records</div>
+                </Link>
             </div>
+        </>
 
-            {isModalOpen && (
+            {/* {isModalOpen && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
                     <div ref={modalRef} className="bg-black p-5 rounded-lg shadow-lg max-w-2xl w-full">
                         <h2 className="text-xl mb-4">Patient Records</h2>
@@ -51,7 +60,7 @@ export default function DoctorDashboard() {
                         </button>
                     </div>
                 </div>
-            )}
+            )} */}
         </>
     );
 }

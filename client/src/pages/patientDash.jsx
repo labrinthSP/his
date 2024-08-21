@@ -116,50 +116,24 @@ export default function PatientDashboard() {
             {/* Modal */}
             {isModalOpen && selectedPatient && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-                    <div className="bg-white text-black p-6 rounded shadow-md max-w-lg w-full">
+                    <div className="bg-black p-6 rounded shadow-md max-w-lg w-full">
                         {isEditing ? (
                             <>
-                                <h2 className="text-xl font-bold mb-4">Edit Patient</h2>
-                                <div className="mb-4">
-                                    <label className="block text-sm font-bold mb-2">Name</label>
-                                    <input
-                                        type="text"
-                                        name="name"
-                                        value={selectedPatient.name}
-                                        onChange={handleChange}
-                                        className="w-full px-3 py-2 border rounded"
-                                    />
-                                </div>
-                                <div className="mb-4">
-                                    <label className="block text-sm font-bold mb-2">Email</label>
-                                    <input
-                                        type="email"
-                                        name="email"
-                                        value={selectedPatient.email}
-                                        onChange={handleChange}
-                                        className="w-full px-3 py-2 border rounded"
-                                    />
-                                </div>
-                                <div className="mb-4">
-                                    <label className="block text-sm font-bold mb-2">Phone</label>
-                                    <input
-                                        type="text"
-                                        name="phone"
-                                        value={selectedPatient.phone}
-                                        onChange={handleChange}
-                                        className="w-full px-3 py-2 border rounded"
-                                    />
-                                </div>
-                                <div className="mb-4">
-                                    <label className="block text-sm font-bold mb-2">Address</label>
-                                    <input
-                                        type="text"
-                                        name="address"
-                                        value={selectedPatient.address}
-                                        onChange={handleChange}
-                                        className="w-full px-3 py-2 border rounded"
-                                    />
-                                </div>
+                                <h2 className="text-xl font-bold mb-4 text-center">Edit Patient Detail</h2>
+                              
+                                <div className="mb-4 col-span-2">
+                                <label htmlFor="doctorNotes" className="block mb-1 font-semibold">
+                                    Doctor Notes
+                                </label>
+                                <textarea
+                                    name="doctorNotes"
+                                    value={selectedPatient.doctorNote} 
+                                    onChange={handleChange}
+                                    placeholder="Enter Doctor Note"
+                                    className="w-full border border-[#626262] rounded px-3 py-2"
+                                    rows="4"
+                                ></textarea>
+                            </div>
                                 <div className="text-right mt-4">
                                     <button
                                         onClick={handleSave}
