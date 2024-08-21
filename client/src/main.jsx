@@ -17,7 +17,7 @@ import AuthWrapper from "./components/AuthWrapper";
 import NurseLogin from "./components/nurseLogin";
 import DoctorLogin from "./components/doctorLogin";
 import StaffRegister from "./components/staffRegister";
-import PatientRegister from "./components/patientRegister";
+import PatientRegister from "./components/PatientRegister";
 import EditPatient from "./components/editPatient";
 import PatientCheck from "./components/patientCheck";
 
