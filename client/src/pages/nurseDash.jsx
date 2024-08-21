@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import PatientRegister from "./patientRegister"
+import PatientRegister from "../components/patientRegister"
 
 
 export default function NurseDashboard() {

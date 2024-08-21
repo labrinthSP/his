@@ -114,6 +114,7 @@ module.exports = {
     StaffRegister,
     StaffLogin,
     getStaff,
+    getStaffById,
     updateStaff,
     deleteStaff,
 };

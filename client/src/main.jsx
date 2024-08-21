@@ -12,12 +12,12 @@ import Register from "./components/register";
 import PatientDashboard from "./pages/patientDash";
 import DoctorDashboard from "./pages/doctorDash";
 import AdminDashboard from "./pages/adminDash";
-import NurseDashboard from "./pages/nurseDash/nurseDash";
+import NurseDashboard from "./pages/nurseDash";
 import AuthWrapper from "./components/AuthWrapper";
 import NurseLogin from "./components/nurseLogin";
 import DoctorLogin from "./components/doctorLogin";
 import StaffRegister from "./components/staffRegister";
-import PatientRegister from "./pages/nurseDash/patientRegister";
+import PatientRegister from "./components/patientRegister";
 import EditPatient from "./components/editPatient";
 import PatientCheck from "./components/patientCheck";
 
