@@ -61,6 +61,25 @@ const updatePatient = async (req, res) => {
     }
 };
 
+// Search patients by name or serial number
+const searchPatients = async (req, res) => {
+    try {
+        const searchQuery = req.query.search; // Get the search query from the URL
+        const patients = await Patient.find({
+            $or: [
+                { name: new RegExp(searchQuery, 'i') }, // Case-insensitive search for name
+                { serialNumber: searchQuery } // Exact match for serial number
+            ]
+        });
+        if (patients.length === 0) {
+            return res.status(404).json({ message: 'No patients found' });
+        }
+        res.status(200).send(patients);
+    } catch (error) {
+        res.status(500).send(error);
+    }
+};
+
 // Delete a patient
 const deletePatient = async (req, res) => {
     try {
@@ -79,5 +98,6 @@ module.exports = {
     getPatient,
     getPatientById,
     updatePatient,
+    searchPatients,
     deletePatient,
 };
